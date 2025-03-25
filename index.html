@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>猫山书记 - 首页</title>
+  <style>
+    .hero {
+      background: url('https://i.imgur.com/Ca4tIZ9.jpg') no-repeat center center;
+      background-size: contain;
+      background-color: #000;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      padding: 0 1em;
+      gap: 1em;
+    }
+    .hero-content h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      margin-bottom: 0.5em;
+    }
+    .hero-content .search-box input {
+      font-size: 1.1em;
+      padding: 0.7em;
+      margin: 0.3em;
+      border-radius: 6px;
+      border: none;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      font-weight: bold;
+      width: 260px;
+      text-align: center;
+      box-shadow: 0 0 8px rgba(0,0,0,0.4);
+    }
+    .hero-content .search-box button {
+      font-size: 1.1em;
+      padding: 0.7em 1.2em;
+      margin: 0.3em;
+      border-radius: 6px;
+      border: none;
+      background-color: #ff9900;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(255,153,0,0.6);
+      transition: background-color 0.3s ease;
+    }
+    .hero-content .search-box button:hover {
+      background-color: #e68a00;
+    }
+    header, footer {
+      background-color: #f6f9fc;
+      padding: 1em 2em;
+    }
+    nav a {
+      margin: 0 1em;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .section {
+      border: 2px dashed #ccc;
+      margin: 2em auto;
+      max-width: 1000px;
+      border-radius: 12px;
+      padding: 2em;
+      background-color: #fff;
+      text-align: center;
+    }
+    .card-grid {
+      display: flex;
+      gap: 1em;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .card {
+      background: white;
+      padding: 1em;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 250px;
+    }
+</style>
+</head>
+<body>
+
+  <!-- 顶部导航 -->
+  <header>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div><strong>猫山书记</strong></div>
+      <nav>
+        <a href="#how">如何领养</a>
+        <a href="#browse">浏览猫咪</a>
+        <a href="#rehome">我要送养</a>
+        <a href="#adopt">我要领养</a>
+        <a href="#community">交流社区</a>
+        <a href="#showcase">晒猫模块</a>
+        <a href="#shop">周边商店</a>
+        <a href="#edu">猫咪科普</a>
+        <a href="#login">登录</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 横幅区域 -->
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>为每一只猫找到家</h1>
+      <div class="search-box">
+        <input type="text" placeholder="输入城市/地区...">
+        <button>搜索猫咪</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. 浏览猫咪模块 -->
+  <section class="section" id="browse">
+    <h2>等待被领养的猫咪</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://i.imgur.com/T16yc1L.jpeg" alt="贱猫1" style="width:100%; border-radius: 6px;">
+        <h3>蔡徐坤</h3>
+        <p>2岁 · 女孩 · 浙江</p>
+      </div>
+      <div class="card">
+        <img src="https://i.imgur.com/ZTJ9qFd.jpeg" alt="健猫2" style="width:100%; border-radius: 6px;">
+        <h3>王子异</h3>
+        <p>1岁 · 男孩 · 山西</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 如何操作模块 -->
+  <section class="section" id="how">
+    <h2>如何操作？</h2>
+    <p>平台审核送养方，保障猫咪健康；领养流程清晰透明，提供回访与后续支持。</p>
+    <button>（协议介绍页面）</button>
+  </section>
+
+  <!-- 3. 领养模块 -->
+  <section class="section" id="adopt">
+    <h2>我要领养</h2>
+    <p>填写领养申请表，选择你有缘的猫咪，平台审核机制确保匹配度和送养人领养人双方安全。</p>
+    <button>立即申请</button>
+  </section>
+
+  <!-- 4. 送养模块 -->
+  <section class="section" id="rehome">
+    <h2>有猫咪需要送养？</h2>
+    <p>我们帮助您找到可靠的领养人</p>
+    <button>发布送养信息</button>
+  </section>
+
+  <!-- 5. 交流社区模块 -->
+  <section class="section" id="community">
+    <h2>交流社区</h2>
+    <p>交流经验、分享日常，建立社区。</p>
+    <button>进入社区</button>
+  </section>
+
+  <!-- 6. 晒猫模块 -->
+  <section class="section" id="showcase">
+    <h2>晒猫模块</h2>
+    <p>上传照片（此平台领养方才能发帖）</p>
+    <button>我要晒猫</button>
+  </section>
+
+  <!-- 7. 周边商店模块 -->
+  <section class="section" id="shop">
+    <h2>周边商城</h2>
+    <p>宠物用品与周边</p>
+    <button>逛逛商城</button>
+  </section>
+
+  <!-- 8. 科普模块 -->
+  <section class="section" id="edu">
+    <h2>科普模块</h2>
+    <p>学习猫咪行为、饮食、疫苗知识。</p>
+    <button>开始学习</button>
+  </section>
+
+  <!-- 底部信息 -->
+  <footer>
+    <p>© 2025 猫山书记 | 联系我们 | 隐私政策 | 使用条款</p>
+  </footer>
+
+</body>
+</html>
